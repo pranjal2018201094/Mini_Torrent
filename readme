@@ -1,0 +1,15 @@
+1. Only 1 tracker is up. So, no sinc.
+2. Log file is remaining.
+3. This functionality is not done properly. "When the application starts, the available .mtorrent files and related files will be checked and
+request to add the client name in respective files on tracker server will be sent."
+4. Share, Get, Show downloads, remove command is working.
+5. By giving exit command, application will close.
+6. I have uploaded makefile. In single make command both client and tracker cpp will be built.
+   If not working then command is
+ 
+   g++ tracker.cpp -o tracker
+   ./tracker <my_tracker_ip>:<my_tracker_port> <other_tracker_ip>:<other_tracker_port> <seederlist_file> <log_file>
+
+   g++ client.cpp -o client -lcrypto -pthread
+   ​./client <CLIENT_IP>:<UPLOAD_PORT> <TRACKER_IP_1>:<TRACKER_PORT_1> <TRACKER_IP_2>:<TRACKER_PORT_2> <log_file>
+
